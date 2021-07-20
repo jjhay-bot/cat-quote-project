@@ -1,0 +1,16 @@
+<div class='quotes'>
+  <p id="notice"><%= notice %></p>
+
+  <p>
+    <strong>Title:</strong>
+    <%= @quote.title %>
+  </p>
+
+  <p>
+    <strong>Author:</strong>
+    <%= @quote.author %>
+  </p>
+
+  <%= link_to 'Edit', edit_quote_path(@quote) %> |
+  <%= link_to 'Back', quotes_path %>
+</div>

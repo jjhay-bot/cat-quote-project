@@ -1,0 +1,47 @@
+<p id="notice"><%= notice %></p>
+
+
+<div class='quotes'>
+  <h1 class="quoteText">"<%= @quotes.last.title %>"</h2>
+  <span>
+    <i class="quoteAuthor"> -<%= @quotes.last.author %></i>
+    <img onclick="showEditDestroy" class="optionBtn" src="https://t4.ftcdn.net/jpg/03/05/87/61/240_F_305876177_4EzB8UJafxNruTRjfLgc57mb07Qn1cNv.jpg" alt="...">
+  </span>
+
+  <div>
+    <!-- <%= link_to 'Show', @quotes.last %> -->
+    <%= link_to 'Edit', edit_quote_path(@quotes.last) %>
+    <span style="color: blue;">/</span>
+    <%= link_to 'Destroy', @quotes.last, method: :delete, data: { confirm: 'Are you sure?' } %>  
+  </div>
+</div>
+
+<%= link_to '✚', new_quote_path, :class => "addQuote" %>
+
+<!-- <div>
+  <table>
+    <thead>
+      <tr>
+        <th>Title</th>
+        <th>Author</th>
+        <th colspan="3"></th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <% @quotes.each do |quote| %>
+        <tr>
+          <td><%= quote.title %></td>
+          <td><%= quote.author %></td>
+          <td><%= link_to 'Show', quote %></td>
+          <td><%= link_to 'Edit', edit_quote_path(quote) %></td>
+          <td><%= link_to 'Destroy', quote, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+
+</div>
+
+
+ -->
